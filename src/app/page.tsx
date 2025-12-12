@@ -1,17 +1,28 @@
+import LoginForm from "@/components/LoginForm";
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle,
+} from "@/components/shadcnui/card";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Nextjs Starter Frontend",
-	description: "Production grade Next.js starter template",
+	title: "Login | Auth Form App",
+	description: "Login page of Auth Form App",
 };
 
 const page = () => {
 	return (
 		<section className="grid h-[90dvh] place-items-center">
-			<div className="space-y-2 text-center">
-				<h1 className="text-5xl font-semibold">Nextjs Starter Frontend</h1>
-				<h2 className="text-3xl">Production grade Next.js starter template</h2>
-			</div>
+			<Card className="w-xs">
+				<CardHeader className="text-center text-2xl">
+					<CardTitle>Register</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<LoginForm />
+				</CardContent>
+			</Card>
 		</section>
 	);
 };
