@@ -1,4 +1,4 @@
-import RegisterPage from "@/components/RegisterPage";
+import RegisterForm from "@/components/RegisterForm";
 import {
 	Card,
 	CardContent,
@@ -8,7 +8,7 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Register | Auth-Form-App",
+	title: "Register | Auth Form App",
 	description: "Register page of Auth-Form-App",
 };
 
@@ -20,7 +20,7 @@ const page = () => {
 					<CardTitle>Register</CardTitle>
 				</CardHeader>
 				<CardContent>
-					<RegisterPage />
+					<RegisterForm />
 				</CardContent>
 			</Card>
 		</section>

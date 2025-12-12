@@ -5,8 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import z from "zod";
 
-const RegisterPage = () => {
-	const {} = useForm({
+const RegisterForm = () => {
+	const { handleSubmit, control } = useForm({
 		resolver: zodResolver(registerSchema),
 		defaultValues: {
 			name: "",
@@ -28,7 +28,11 @@ const RegisterPage = () => {
 		// push("/");
 	};
 
-	return <form></form>;
+	return (
+		<form
+			onSubmit={handleSubmit(handleRegister)}
+			className=""></form>
+	);
 };
 
-export default RegisterPage;
+export default RegisterForm;
